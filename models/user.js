@@ -13,22 +13,15 @@ const UserSchema = mongoose.Schema({
     },
     username: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     password: {
         type: String,
         required: true
-    }, 
-    characters: {
-
     }
 });
 
-const CharacterSchema = mongoose.Schema({
-    charName: String,
-    locale: String,
-    realm: String 
-});
 
 const User = module.exports = mongoose.model('User', UserSchema);
 
