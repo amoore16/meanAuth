@@ -1,4 +1,6 @@
+let env = require('../env.js');
+
 module.exports = {
-    database: 'mongodb://localhost:27017/meanauth',
-    secret: 'secretToken'
+    database: process.env.DATABASE,
+    secret: process.env.SECRET
 }
